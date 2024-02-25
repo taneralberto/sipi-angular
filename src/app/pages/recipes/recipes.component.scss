@@ -1,0 +1,110 @@
+.container{
+  padding: 3rem;
+}
+
+.new-recipe {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 1rem;
+  max-width: 400px;
+
+  &__title {
+    color: #222222;
+    font-weight: bold;
+  }
+
+  &__raw {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  &__input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    resize: none;
+  }
+
+  &__submit {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #ccc;
+    }
+  }
+}
+
+.recipes{
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.recipe {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 2px 2px 2px #ccc;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #f7f7f7;
+  }
+
+  &__close {
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    background-color: #222222;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition:cubic-bezier(1, 0, 0, 1) 0.3s;
+
+    &:hover{
+      background-color: #ccc;
+      color: #222222;
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__description {
+    margin-top: 1rem;
+    color: #303030;
+  }
+
+  &__ingredients {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    & li {
+      color: #303030;
+
+      &::before {
+        content: '>';
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
