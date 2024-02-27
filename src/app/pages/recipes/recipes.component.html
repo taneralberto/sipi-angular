@@ -34,10 +34,9 @@
     }
   </div>
 
-
-  <ol class="recipes">
+  <ol cdkDropList cdkDropListOrientation="horizontal" class="recipes" (cdkDropListDropped)="drop($event)">
     @for (recipe of recipes; track recipe.id) {
-      <li class="recipe">
+      <li class="recipe" cdkDrag>
         <span class="recipe__close" (click)="remove(recipe.id)"> X </span>
         <h1 class="recipe__name">{{ recipe.name }}</h1>
         <p class="recipe__description">{{ recipe.description }}</p>
@@ -51,4 +50,5 @@
       </li>
     }
   </ol>
+
 </div>
